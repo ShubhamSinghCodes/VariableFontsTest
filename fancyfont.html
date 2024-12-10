@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fancy Font!</title>
+</head>
+<body>
+    <style>
+        @font-face {
+            font-family: "Rocher Color";
+            src: url("RocherColorGX.woff2") format("woff2");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "Cheee Variable";
+            src: url("Cheee_Variable.woff2") format("woff2");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "Nabla";
+            src: url("Nabla-Regular-VariableFont_EDPT,EHLT.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            background-color: black;
+            color: white;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top-text,
+        .main-text,
+        .sub-text {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+        }
+
+        .top-text {
+            top: 10%;
+        }
+
+        .main-text {
+            top: 40%;
+        }
+
+        .sub-text {
+            top: 70%;
+        }
+
+        .top-text span {
+            font-family: "Nabla";
+            font-size: 10vw;
+            display: inline-block;
+            font-variation-settings: "EDPT" 100, "EHLT" 12;
+            transition: font-variation-settings 0.3s ease;
+            margin-right: 1vw;
+        }
+
+        .top-text span:last-child {
+            margin-right: 0;
+        }
+
+        .top-text span:hover {
+            font-variation-settings: "EDPT" 160, "EHLT" 24;
+        }
+
+        .main-text span {
+            font-family: "Rocher Color";
+            font-size: 10vw;
+            display: inline-block;
+            font-variation-settings: "BVEL" 50, "SHDW" 50;
+            transition: font-variation-settings 0.3s ease;
+            margin-right: 1.5vw;
+        }
+
+        .main-text span:last-child {
+            margin-right: 0;
+        }
+
+        .main-text span:hover {
+            font-variation-settings: "BVEL" 100, "SHDW" 75;
+        }
+
+        @keyframes initialTransition {
+            from {
+                font-variation-settings: "yest" 0, "grvt" 0, "temp" 0;
+            }
+            to {
+                font-variation-settings: "yest" 500, "grvt" 0, "temp" 0;
+            }
+        }
+
+        .sub-text span {
+            font-family: "Cheee Variable";
+            font-size: 5vw;
+            display: inline-block;
+            font-variation-settings: "yest" 500, "grvt" 0, "temp" 0;
+            transition: font-variation-settings 0.3s ease, font-variation-settings 5s ease;
+            margin-right: 0.75vw;
+            animation: initialTransition 3s ease forwards;
+        }
+
+        .sub-text span:last-child {
+            margin-right: 0;
+        }
+
+        .sub-text span:hover {
+            font-variation-settings: "yest" 500, "grvt" 0, "temp" 1000;
+            transition: font-variation-settings 0.3s ease;
+        }
+    </style>
+
+    <div class="top-text">
+        <span>I</span><span>am</span><span>very</span><span>happy</span>
+    </div>
+    <div class="main-text">
+        <span>I</span><span>like</span><span>fancy</span><span>fonts</span>
+    </div>
+    <div class="sub-text"><span>Hover</span><span>above</span><span>the</span><span>words</span></div>
+
+    <script>
+        window.addEventListener("load", () => {
+            const subTextSpans = document.querySelectorAll(".sub-text span");
+            subTextSpans.forEach(span => {
+                span.addEventListener("animationend", () => {
+                    span.style.animation = "none";
+                });
+            });
+        });
+    </script>
+</body>
+</html>
