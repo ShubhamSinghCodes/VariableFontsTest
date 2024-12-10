@@ -2,9 +2,13 @@
 Playing around with variable fonts and ChatGPT :)
 Hopefully I'm not breaking any licence rule of the fonts?
 
+### Compatibility
+Color and variable fonts are not supported in all browsers, if you do not see anything try using the **latest** version of your browser.
+As far as I know, Nabla uses cutting-edge font formats which is only supported in a few browsers for now, for example the latest versions of Chrome and Edge.
+
 ### Credits
 
-- **Cheee Variable** by James Edmondson  
+- **Cheee Variable v1.3(Old version)** by James Edmondson  
   [Learn more](https://ohnotype.co/fonts/cheee)
 
 - **Nabla** by Arthur Reinders Folmer, Just van Rossum  
@@ -16,4 +20,4 @@ Hopefully I'm not breaking any licence rule of the fonts?
 
 ### See It in Action
 
-Check out the live demo: [Fancy Font Showcase](https://raw.githack.com/ShubhamSinghCodes/VariableFontsTest/main/fancyfont.html)
+Check it out live [here](https://raw.githack.com/ShubhamSinghCodes/VariableFontsTest/main/fancyfont.html)
